@@ -1,0 +1,14 @@
+.footerImage {
+  width: 2rem;
+  height: 2rem;
+}
+
+.footer {
+  text-align: center;
+  margin: 0 0 2rem 0;
+}
+
+.footerLink {
+  display: inline-block;
+  margin: 0 1rem;
+}
