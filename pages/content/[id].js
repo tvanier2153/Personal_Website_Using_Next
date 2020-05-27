@@ -1,11 +1,11 @@
 import Layout from '../../components/layout'
 import Date from '../../components/date'
 import Head from 'next/head'
-import { getAllInfoIds, getInfoData } from '../../lib/info'
+import { getAllContentIds, getContentData } from '../../lib/content'
 import utilStyles from '../../styles/utils.module.css' 
 
 export async function getStaticPaths() {
-  const paths = getAllInfoIds()
+  const paths = getAllContentIds()
   return {
     paths,
     fallback: false
@@ -13,27 +13,27 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const infoData = await getInfoData(params.id)
+  const contentData = await getContentData(params.id)
   return {
     props: {
-      infoData
+      contentData
     }
   }
 }  
 
-export default function Info({ infoData }) {
+export default function Content({ contentData }) {
   return (
     <Layout>
       <Head>
-        <title>{infoData.title}</title>
+        <title>{contentData.title}</title>
       </Head>
       <article>
-        <h1 className={utilStyles.headingXl}>{infoData.title}</h1>
+        <h1 className={utilStyles.headingXl}>{contentData.title}</h1>
         <div className={utilStyles.lightText}>
           Last Updated On: 
-          <Date dateString={infoData.date} />
+          <Date dateString={contentData.date} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: infoData.contentHtml }} />
+        <div dangerouslySetInnerHTML={{ __html: contentData.contentHtml }} />
       </article>
     </Layout>
   )

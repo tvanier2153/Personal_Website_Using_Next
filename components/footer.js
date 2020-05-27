@@ -1,8 +1,5 @@
 import styles from './footer.module.css'
 
-const name = 'Thomas Vanier'
-export const siteTitle = 'Tommy\'s Personal Website'
-
 export default function Footer() {
   return (
     <div className={styles.footer}>
