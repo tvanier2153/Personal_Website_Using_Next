@@ -1,11 +1,12 @@
 .footerImage {
-  width: 2rem;
   height: 2rem;
 }
 
 .footer {
   text-align: center;
-  margin: 0 0 2rem 0;
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
 }
 
 .footerLink {

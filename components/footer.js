@@ -5,7 +5,7 @@ export default function Footer() {
     <div className={styles.footer}>
       <a href="https://github.com/tvanier2153" className={styles.footerLink}>
         <img
-          src="/images/GitHub-Mark-32px.png"
+          src="/images/GitHub-Mark-64px.png"
           className={styles.footerImage}
           alt="Github"
         />

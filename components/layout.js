@@ -3,13 +3,15 @@ import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import Footer from './footer'
+import Navbar from './navbar'
 
 const name = 'Thomas Vanier'
 export const siteTitle = 'Tommy\'s Personal Website'
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, allContentData }) {
   return (
     <>
+      <Navbar allContentData={allContentData}/>
       <div className={styles.container}>
         <Head>
           <link rel="icon" href="/favicon.ico" />
