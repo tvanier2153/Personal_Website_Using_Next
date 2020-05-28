@@ -6,6 +6,9 @@ export default function Navbar({ allContentData }) {
   return (
     <section className={`${utilStyles.headingMd} ${styles.navbar}`}>
       <ul className={styles.list}>
+        <li className={styles.listItem}>
+            <a href="/resume.pdf">Resume</a>
+        </li>
         {allContentData.map(({ id, linkTitle }) => (
           <li className={styles.listItem} key={id}>
             <Link href="/content/[id]" as={`/content/${id}`}>
@@ -14,10 +17,10 @@ export default function Navbar({ allContentData }) {
           </li>
         ))}
         <li className={styles.listItem}>
-            <Link href="/resume.pdf">
-              <a>Resume</a>
-            </Link>
-          </li>
+          <Link href="/resume.pdf">
+            <a>Resume</a>
+          </Link>
+        </li>
       </ul>
     </section>
   )

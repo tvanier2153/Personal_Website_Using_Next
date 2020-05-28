@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedContentData } from '../lib/content'
-import Link from 'next/link'
 
 export async function getStaticProps() {
   const allContentData = getSortedContentData()
@@ -26,9 +25,6 @@ export default function Home({ allContentData }) {
           bloopidy doop.
         </p>  
       </section>
-      <Link href="/test">
-        <a>testing</a>
-      </Link>
     </Layout>
   )
 }
