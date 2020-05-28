@@ -14,10 +14,10 @@ export default function Navbar({ allContentData }) {
           </li>
         ))}
         <li className={styles.listItem}>
-            <Link href="/resume.pdf">
-              <a>Resume</a>
-            </Link>
-          </li>
+          <Link href="/resume.pdf">
+            <a>Resume</a>
+          </Link>
+        </li>
       </ul>
     </section>
   )
