@@ -6,6 +6,9 @@ export default function Navbar({ allContentData }) {
   return (
     <section className={`${utilStyles.headingMd} ${styles.navbar}`}>
       <ul className={styles.list}>
+        <li className={styles.listItem}>
+            <a href="/resume.pdf">Resume</a>
+        </li>
         {allContentData.map(({ id, linkTitle }) => (
           <li className={styles.listItem} key={id}>
             <Link href="/content/[id]" as={`/content/${id}`}>
